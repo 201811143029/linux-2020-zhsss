@@ -152,12 +152,14 @@ mkisofs -r -V "Custom Ubuntu Install CD" \
 # 差异对比：Diffuse
 
 *指定支持的原始中文英文,设置字符集，防止中文乱码，跳过安装语言的询问
-![1](png/2.png)
+![1](png/1.png)
 
 *设置网络的等待时间，开启手动配置
-![1](png/3.png)
+![1](png/2.png)
 
 *实现了静态IP，安装过程禁止自动联网更新软件包
+![1](png/3.png)
+
 ![1](png/4.png)
 
 *强制设置主机名
