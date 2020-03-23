@@ -20,18 +20,18 @@ output: revealjs::revealjs_presentation
 # 步骤一：无人值守Linux安装镜像制作
 
 
-1.查看网络
+1.查看网络,获取IP
 ```bash
 #ifconfig -a
 ```
 若网卡未开启则执行
 ```bash
-#sudo ifconfig enp0s3 up
+#sudo ifconfig enp0s8 up
 
-#sudo dhclient enp0s3
+#sudo dhclient enp0s8
 ```
 
-![IP](/chap0x01/png/获取IP.png)
+![IP](png/ip.png)
 
 2.安装putty，打开psftp，连接Linux虚拟机(安装ssh)
 
@@ -132,6 +132,14 @@ mkisofs -r -V "Custom Ubuntu Install CD" \
 
 # 步骤二：Virtualbox安装完Ubuntu之后新添加的网卡如何实现系统引导自动启用和自动获取IP？
 
+*添加双网卡
+
+*设置putty免密登录
+
+*若显示network error :connection refused，安装并打开ssh
+
+![putty](png/免密.png)
+
 # 步骤三：使用sftp在虚拟机和宿主机之间的传输文件
 
 *open <ipaddress>     #连接到虚拟机
@@ -141,12 +149,7 @@ mkisofs -r -V "Custom Ubuntu Install CD" \
 *put <filename>       #从宿主机上传文件到虚拟机
 
 ---
-
-一个我修改定制好的[ubuntu-server-autoinstall.seed](exp/chap0x01/cd-rom/preseed/ubuntu-server-autoinstall.seed)，请自行和官方示例文件进行比对，自行思考理解和掌握：
-
-* 我做了哪些修改？
-    * 用什么「工具」能提高「差异」比对的效率？
-* 这些修改的作用是什么？
+# 修改对比
 
 ---
 
